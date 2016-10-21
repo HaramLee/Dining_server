@@ -9,9 +9,8 @@
         <link rel="stylesheet" type="text/css" href="/assets/css/default.css"/>
     </head>
     <body>
-		{navbar}
         <div class="container">
-            
+            {navbar}
 			{content}
 			            
 			<p class="footer">Page rendered in <strong>0.0320</strong> seconds. 
