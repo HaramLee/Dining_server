@@ -9,7 +9,7 @@
         <link rel="stylesheet" type="text/css" href="/assets/css/default.css"/>
     </head>
     <body>
-    <div id="container">
+    <div class="container">
         {navbar}
         <div class="jumbotron">
             <h1>We're hiring</h1>
