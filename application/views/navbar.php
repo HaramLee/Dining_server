@@ -7,6 +7,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
             </button>
             <a class="navbar-brand" href="#">{pagetitle}</a>
         </div>
@@ -16,7 +17,10 @@
                 <li><a href="/">Home</a></li>
                 <li><a href="/hiring">Hiring</a></li>
                 <li><a href="/shopping">Shopping</a></li>
+                <li><a href="/crud">Menu Maintenance</a></li>
+                <li><a href="/toggle">Toggle Role</a></li>
             </ul>
+            <p class="navbar-text navbar-right">Role: {userrole}</p>
         </div><!-- /.navbar-collapse -->
     </div><!-- /.container-fluid -->
 </nav>

@@ -16,3 +16,11 @@ LAB-LOG
 - Added parsedown library and autoloaded it
 - Added secondary template to use for hiring and other pages
 - added jobs.md to hold the content for the hiring index page
+
+11/3/2016 3:06 PM - Andrew
+- Added Caboose package and all of its components
+- Added Crud and Toggle Controllers
+- Updated started.sql to include the ci_sessions table
+- Updated autoload and config to load sessions and caboose packages
+- Changed MY_Controller to load caboose styles and appropriately modified templates
+- Changed navbar to show links for the new controllers
