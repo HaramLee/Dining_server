@@ -24,3 +24,9 @@ LAB-LOG
 - Updated autoload and config to load sessions and caboose packages
 - Changed MY_Controller to load caboose styles and appropriately modified templates
 - Changed navbar to show links for the new controllers
+
+11/10/2016 4:25 PM - Haram / Andrew
+- Updated Crud controller to show the existing menu items
+- Added edit method in Crud controller
+- Updated caboose to improve form appearance
+- Added save and cancel button to edit view and cancel method in crud controller

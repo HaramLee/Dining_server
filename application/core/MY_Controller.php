@@ -24,9 +24,13 @@ class Application extends CI_Controller
 		parent::__construct();
 
 		//  Set basic view parameters
-		$this->data = array ();
-		$this->data['pagetitle'] = 'Harandrew 101';
-		$this->data['ci_version'] = (ENVIRONMENT === 'development') ? 'CodeIgniter Version <strong>'.CI_VERSION.'</strong>' : '';
+		$this->data = array();
+		$this->data['pagetitle'] = "Harandrew 101";
+		$this->data['ci_version'] = (ENVIRONMENT === 'development') ? 'CodeIgniter Version <strong>' . CI_VERSION . '</strong>' : '';
+		
+		// get the user role
+		$this->data['userrole'] = $this->session->userdata('userrole');
+		if ($this->data['userrole'] == NULL) $this->data['userrole'] = '?';
 	}
 
 	/**
@@ -34,11 +38,7 @@ class Application extends CI_Controller
 	 */
 	function render($template = 'template')
 	{
-        // get the user role
-        $this->data['userrole'] = $this->session->userdata('userrole');
-        if ($this->data['userrole'] == NULL)
-            $this->data['userrole'] = '?';
-
+	
 		$this->data['navbar'] = $this->parser->parse('navbar', $this->data, true);
 		// use layout content if provided
 		if (!isset($this->data['content']))
