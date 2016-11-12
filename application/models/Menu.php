@@ -22,19 +22,19 @@ class Menu extends MY_Model
 	}
 
 	function rule_picture() {
-	$config_picture = [
-        'upload_path' => './images', // relative to front controller
-		'allowed_types' => 'gif|jpg|jpeg|png',
-		'max_size' => 100, // 100KB should be enough for our graphical menu
-		'max_width' => 256,
-		'max_height' => 256, // actually, we want exactly 256x256
-		'min_width' => 256,
-		'min_height' => 256, // fixed it
-		'remove_spaces' => TRUE, // eliminate any spaces in the name
-		'overwrite' => TRUE, // overwrite existing image
-    ];
+		$config_picture = [
+			'upload_path' => './images', // relative to front controller
+			'allowed_types' => 'gif|jpg|jpeg|png',
+			'max_size' => 100, // 100KB should be enough for our graphical menu
+			'max_width' => 256,
+			'max_height' => 256, // actually, we want exactly 256x256
+			'min_width' => 256,
+			'min_height' => 256, // fixed it
+			'remove_spaces' => TRUE, // eliminate any spaces in the name
+			'overwrite' => TRUE, // overwrite existing image
+		];
 
-	return $config_picture;
+		return $config_picture;
 	}
 
 
