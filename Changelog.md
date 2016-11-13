@@ -24,3 +24,18 @@ LAB-LOG
 - Updated autoload and config to load sessions and caboose packages
 - Changed MY_Controller to load caboose styles and appropriately modified templates
 - Changed navbar to show links for the new controllers
+
+11/10/2016 4:25 PM - Haram / Andrew
+- Updated Crud controller to show the existing menu items
+- Added edit method in Crud controller
+- Updated caboose to improve form appearance
+- Added save and cancel button to edit view and cancel method in crud controller
+
+11/12/2016 11:45 AM - Haram
+- Added rules for form values to be used for validation for editing menu items, including images.
+- Added session removal in index method to clear menu item session, so you won't get stuck seeing one menu.
+- Added error message method to show the user that any values in the form wasn't passed as a message.
+- Added add method and button to add new menu items to the database.
+- Added delete method and button to delete a menu item from the database.
+- Added save method to save the either new/edit menu item into the database.
+- Implemented to upload image in edit method.
