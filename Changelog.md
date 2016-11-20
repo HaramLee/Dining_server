@@ -39,3 +39,6 @@ LAB-LOG
 - Added delete method and button to delete a menu item from the database.
 - Added save method to save the either new/edit menu item into the database.
 - Implemented to upload image in edit method.
+
+11/18/2016 10:20 AM - Andrew
+- 
