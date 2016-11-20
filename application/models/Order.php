@@ -15,6 +15,16 @@ class Order extends CI_Model {
         if (is_array($state)) {
             foreach($state as $key => $value)
                 $this->$key = $value;
+        } elseif ($state != null) {
+            $xml = simplexml_load_file($state);
+            $this->number = (int) $xml->number;
+            $this->datetime = (string) $xml->datetime;
+            $this->items = array();
+            foreach ($xml->item as $item) {
+                $key = (string) $item->code;
+                $quantity = (int) $item->quantity;
+                $this->items[$key] = $quantity;
+            }
         } else {
             $this->number = 0;
             $this->datetime = null;
@@ -42,6 +52,7 @@ class Order extends CI_Model {
         $result = $this->data['pagetitle'] . '  ' . PHP_EOL;
         $result .= date(DATE_ATOM) . PHP_EOL;
         $result .= PHP_EOL . 'Your Order:'. PHP_EOL . PHP_EOL;
+        $result .= "<h1>$this->number</h1>" . PHP_EOL;
         foreach($this->items as $key => $value) {
             $menu = $this->Menu->get($key);
             $result .= '- ' . $value . ' ' . $menu->name . PHP_EOL;
@@ -94,6 +105,16 @@ class Order extends CI_Model {
             if (! $ok) return false;
         // phew - the order is good
         return true;
+    }
+
+    public function total()
+    {
+        $total = 0;
+        foreach($this->items as $key => $value) {
+            $menu = $this->Menu->get($key);
+            $total += $value * $menu->price;
+        }
+        return $total;
     }
 
 }
