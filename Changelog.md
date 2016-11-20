@@ -41,4 +41,8 @@ LAB-LOG
 - Implemented to upload image in edit method.
 
 11/18/2016 10:20 AM - Andrew
-- 
+- Added "Orders Processed so far" to the Shopping menu
+- Added a totalling function when an order is being placed
+- Added a checkout and clear functions to finalize an order or clear it using session data
+- Orders are saved to an XML file in the data folder
+- Function to retrieve previous orders and parse the stored XML files
